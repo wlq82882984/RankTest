@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface AcadPagperViewController : UIViewController
-
+@property(nonatomic,copy)NSMutableArray   *dataArr;
 @end
