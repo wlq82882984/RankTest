@@ -1,0 +1,194 @@
+{\rtf1\ansi\ansicpg936\cocoartf1348\cocoasubrtf170
+{\fonttbl\f0\fnil\fcharset134 STSongti-SC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset134 STHeitiSC-Light;
+}
+{\colortbl;\red255\green255\blue255;\red0\green160\blue255;\red255\green173\blue125;\red120\green109\blue255;
+\red228\green124\blue72;\red211\green24\blue149;\red35\green255\blue131;\red255\green242\blue187;\red255\green24\blue36;
+\red255\green44\blue56;\red251\green0\blue255;\red29\green48\blue13;\red65\green204\blue69;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17580\viewh10180\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural
+
+\f0\fs48 \cf0 \'bc\'c6\'cb\'e3\'d0\'d0\'b8\'df\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'ba\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f1\fs26 \cf2 \CocoaLigature0 UIFont\cf3  * tmpFont = [\cf2 UIFont\cf3  \cf2 systemFontOfSize\cf3 :\cf4 12\cf3 ];\
+\cf2 CGSize\cf3  size = \cf2 CGSizeMake\cf3 (\cf5 ScreenWidth\cf3 -\cf4 14\cf3 -\cf4 8\cf3 , \cf4 9999\cf3 );\
+\cf2 NSDictionary\cf3  * tmpDic = [\cf2 NSDictionary\cf3  \cf2 dictionaryWithObjectsAndKeys\cf3 :tmpFont,\cf2 NSFontAttributeName\cf3 , \cf6 nil\cf3 ];\
+\cf2 NSString\cf3  *con1 = \cf6 self\cf3 .\cf7 professionalTitle\cf3 ;\
+\cf2 CGSize\cf3  con1Size = [con1 \cf2 boundingRectWithSize\cf3 :size \cf2 options\cf3 :\cf2 NSStringDrawingUsesLineFragmentOrigin\cf3  \cf2 attributes\cf3 :tmpDic \cf2 context\cf3 :\cf6 nil\cf3 ].\cf2 size\cf3 ;\
+\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs28 \cf0 \'b5\'b1
+\f1 tableview
+\f2 \'b9\'f6\'b6\'af\'b5\'bd\'d7\'ee\'ba\'f3\'d2\'bb\'d0\'d0\'c4\'da\'c8\'dd\'a3\'ba
+\f1\fs26 \cf8 \
+\pard\tx626\pardeftab626\pardirnatural
+\cf2 NSIndexPath\cf8  *path=[\cf2 NSIndexPath\cf8  \cf2 indexPathForItem\cf8 :\cf6 self\cf8 .\cf7 msgList\cf8 .\cf2 count\cf8 -\cf4 1\cf8  \cf2 inSection\cf8 :\cf4 0\cf8 ];\
+[\cf6 self\cf8 .\cf7 tableView\cf8  \cf2 scrollToRowAtIndexPath\cf8 :path \cf2 atScrollPosition\cf8 :\cf2 UITableViewScrollPositionBottom\cf8  \cf2 animated\cf8 :\cf6 NO\cf8 ];\
+\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs36 \cf9 \'ce\'d2\'c3\'c7\'d4\'da\'bd\'f8\'d0\'d0\'b4\'ab\'d6\'b5\'b5\'c4\'ca\'b1\'ba\'f2\'bb\'f2\'d5\'df\'ca\'c7\'c8\'a1\'d6\'b5\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'d2\'aa\'d7\'a2\'d2\'e2\'b5\'c4\'ca\'c7\'d0\'e8\'d2\'aa\'b6\'d4\'bf\'d5\'d6\'b5\'bd\'f8\'d0\'d0\'d2\'bb\'cf\'c2\'c5\'d0\'b6\'cf\'a3\'ac\'d2\'d4\'b7\'c0\'b1\'a8crash\'a1\'a3\'c0\'fd\'c8\'e7\'a3\'ba\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f1\fs26 \cf8 [dict \cf2 setObject\cf8 :\cf10 @"
+\f2 \'ce\'b4\'d6\'aa
+\f1 "\cf8  \cf2 forKey\cf8 :\cf10 @"addressInfo"\cf8 ];\
+	\cf6 if\cf8  (\cf7 descLocation\cf8 )\{\
+		\cf6 if\cf8  (\cf7 descLocation\cf8 .\cf2 length\cf8  > \cf4 0\cf8 )\
+            \{\
+                [dict \cf2 setObject\cf8 :\cf7 descLocation\cf8  \cf2 forKey\cf8 :\cf10 @"addressInfo"\cf8 ];\
+            \}\
+        \}\
+\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs36 \cf0 \'ce\'d2\'c3\'c7\'bf\'c9\'d2\'d4\'c0\'fb\'d3\'c3\'cf\'b5\'cd\'b3\'d7\'d4\'b4\'f8\'b5\'c4\'b5\'a5\'c0\'fd\'a3\'ac\'bd\'f8\'d0\'d0\'d2\'bb\'d0\'a9\'d0\'a1\'b9\'e6\'c4\'a3\'b5\'c4\'ca\'fd\'be\'dd\'b4\'e6\'b4\'a2\'a1\'a3
+\fs26 \
+\pard\tx626\pardeftab626\pardirnatural
+
+\f1 \cf11  \cf2 NSDictionary\cf11  *dic = (\cf2 NSDictionary\cf11  *)notif.\cf2 object\cf11 ;\
+    \cf6 if\cf11  ([[dic \cf7 safeObjectForKey\cf11 :\cf10 @"errorId"\cf11 ] \cf2 isEqualToString\cf11 :\cf10 @""\cf11 ]) \{\
+        [[\cf2 NSUserDefaults\cf11  \cf2 standardUserDefaults\cf11 ] \cf2 setValue\cf11 :dic \cf2 forKey\cf11 :\cf10 @"LoginInfo"\cf11 ];\
+        [[\cf2 NSUserDefaults\cf11  \cf2 standardUserDefaults\cf11 ] \cf2 setValue\cf11 :\cf10 @"1"\cf11  \cf2 forKey\cf11 :\cf10 @"UserInfo"\cf11 ];\
+        [[\cf2 NSUserDefaults\cf11  \cf2 standardUserDefaults\cf11 ] \cf2 synchronize\cf11 ];\
+        \cf2 NSLog\cf11 (\cf10 @"enter cllbark not or yes"\cf11 );\
+        [\cf6 self\cf11  \cf7 setLables\cf11 :dic];\
+    \}\
+[[\cf2 NSUserDefaults\cf11  \cf2 standardUserDefaults\cf11 ] \cf2 removeObjectForKey\cf11 :\cf10 @"LoginInfo\'94\cf11 ];
+\f2 \cf0 \'b2\'bb\'d0\'e8\'d2\'aa\'b5\'c4\'ca\'b1\'ba\'f2
+\f1 remove
+\f2 \'d2\'bb\'cf\'c2\'bc\'b4\'bf\'c9\'a3\'ac\'bc\'c7\'b5\'c3\'b6\'bc\'d2\'aa\'bd\'f8\'d0\'d0\'d2\'bb\'cf\'c2\'cd\'ac\'b2\'bd\'a1\'a3
+\f1 \cf11 [[\cf2 NSUserDefaults\cf11  \cf2 standardUserDefaults\cf11 ] \cf2 synchronize\cf11 ];\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs36 \cf0 \'cd\'ac\'b2\'bd\'c8\'ce\'ce\'f1\'c0\'ef\'c3\'e6\'c7\'b6\'cc\'d7\'cd\'ac\'b2\'bd\'c8\'ce\'ce\'f1\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'ca\'c7\'bb\'e1\'d7\'e8\'c8\'fb\'d6\'f7\'cf\'df\'b3\'cc\'b5\'c4\'a1\'a3\'b4\'ae\'d0\'d0\'b6\'d3\'c1\'d0\'a3\'ac\'b2\'a2\'d0\'d0\'b6\'d3\'c1\'d0\'a3\'ac\'cd\'ac\'b2\'bd\'a3\'ac\'d2\'ec\'b2\'bd\'c8\'ce\'ce\'f1\'a3\'ac\'b6\'d3\'c1\'d0\'b5\'c4\'b9\'a4\'d7\'f7\'be\'cd\'ca\'c7\'b7\'d6\'c5\'e4\'c8\'ce\'ce\'f1\'b5\'c4\'b5\'f7\'b6\'c8\'a3\'ac\'cd\'ac\'b2\'bd\'b5\'c4\'c8\'ce\'ce\'f1\'b6\'bc\'ca\'c7\'d4\'da\'d6\'f7\'cf\'df\'b3\'cc\'c0\'ef\'c3\'e6\'bd\'f8\'d0\'d0\'b5\'c4\'a1\'a3\
+\
+\'ce\'d2\'c3\'c7\'d4\'da\'c9\'e8\'d6\'c3\'d2\'bb\'b8\'f6view\'b5\'c4\'b1\'b3\'be\'b0\'d6\'ae\'ba\'f3\'a3\'ac\'c8\'e7\'b9\'fb\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f1\fs26 \cf7 filterBgView\cf11 .\cf2 backgroundColor\cf11  = [\cf2 UIColor\cf11  \cf7 colorWithHexString\cf11 :\cf10 @"0x000000"\cf11  \cf7 alpha\cf11 :\cf4 0.5\cf11 ];
+\f2\fs28 \cf0 \'d5\'e2\'c3\'b4\'d2\'bb\'c0\'b4\'b5\'c4\'bb\'b0\'a3\'ac\'bc\'b4\'ca\'b9\'ba\'f3\'c3\'e6\'bd\'ab\'d5\'e2\'b8\'f6view \'b5\'c4\'cd\'b8\'c3\'f7\'b6\'c8\'c9\'e8\'d6\'c3\'b3\'c91.0\'a3\'ac\'d2\'b2\'ca\'c7\'d3\'d0\'b0\'eb\'cd\'b8\'c3\'f7\'b5\'c4\'d0\'a7\'b9\'fb\'b5\'c4\'a3\'ac\'cd\'b8\'c3\'f7\'b6\'c8\'ca\'c7\'b8\'fa\'cb\'e6\'b1\'b3\'be\'b0\'b5\'c4\'cd\'b8\'c3\'f7\'b6\'c8\'c0\'b4\'b5\'c4\'a1\'a3\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\fs36 \cf0 \'ce\'d2\'c3\'c7\'d4\'da\'b6\'d4xib\'ce\'c4\'bc\'fe\'d7\'d4\'b6\'a8\'d2\'e5\'b5\'c4cell\'b8\'f1\'ca\'bd\'bd\'f8\'d0\'d0\'bc\'d3\'d4\'d8\'b5\'c4\'ca\'b1\'ba\'f2\'a3\'ac\'d0\'e8\'d2\'aa\'d7\'f6\'b8\'f6\'d7\'bc\'b1\'b8\'d7\'a2\'b2\'e1\'d2\'bb\'cf\'c2\'a1\'a3
+\fs28 \
+\pard\tx626\pardeftab626\pardirnatural
+
+\f1\fs26 \cf11  [\cf6 self\cf11 .\cf7 mtableView\cf11  \cf2 registerNib\cf11 :[\cf2 UINib\cf11  \cf2 nibWithNibName\cf11 :\cf10 @"TeacherViewCell1"\cf11  \cf2 bundle\cf11 :\cf6 nil\cf11 ]  \cf2 forCellReuseIdentifier\cf11 :\cf10 @"TeacherViewCell1"\cf11 ];\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs36 \cf12 \'c9\'e8\'d6\'c3\'cd\'bc\'c6\'ac\'b9\'f6\'b6\'af\'b5\'c4\'ca\'b1\'bc\'e4ScrollView
+\f1\fs26 \cf11 \
+[\cf7 AdImageView\cf11 .\cf7 animationTimer\cf11  \cf2 setFireDate\cf11 :[\cf2 NSDate\cf11  \cf2 distantPast\cf11 ]];  \
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2 \cf11 \
+\pard\tx626\pardeftab626\pardirnatural
+
+\fs36 \cf0 \'ca\'b9searchable\'d6\'d0\'b5\'c4guang\'b9\'e2\'b1\'ea\'b3\'f6\'cf\'d6\'a3\'ac\'c9\'e8\'d6\'c3tintcolor\'ca\'f4\'d0\'d4\'b1\'e3\'bf\'c9\'d2\'d4\'c1\'cb\'a1\'a3
+\f1\fs26 \cf11 \
+\pard\tx626\pardeftab626\pardirnatural
+\cf7 search\cf11 .\cf2 tintColor\cf11  = [\cf2 UIColor\cf11  \cf2 blackColor\cf11 ];\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs36 \cf0 \'c0\'fb\'d3\'c3\'ce\'c4\'b1\'be\'bf\'f2\'cf\'de\'d6\'c6\'ce\'c4\'b1\'be\'b5\'c4\'d7\'d6\'ca\'fd\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f1\fs26 \cf11 - (\cf6 BOOL\cf11 )textField:(\cf2 UITextField\cf11  *)textField shouldChangeCharactersInRange:(\cf2 NSRange\cf11 )range replacementString:(\cf2 NSString\cf11  *)string\{\
+    \cf6 if\cf11  ([string \cf2 isEqualToString\cf11 :\cf10 @"\\n"\cf11 ])\{\
+        \cf6 return\cf11  \cf6 YES\cf11 ;\
+    \}\
+    \cf2 NSString\cf11  * toBeString = [textField.\cf2 text\cf11  \cf2 stringByReplacingCharactersInRange\cf11 :range \cf2 withString\cf11 :string];\
+    \
+    \cf6 if\cf11  ( textField.\cf2 tag\cf11  == \cf4 100\cf11 )\{\
+        \cf6 if\cf11  ([toBeString \cf2 length\cf11 ] > \cf4 20\cf11 ) \{\
+            textField.\cf2 text\cf11  = [toBeString \cf2 substringToIndex\cf11 :\cf4 20\cf11 ];\
+            \cf2 UIAlertView\cf11  *alert = [[\cf2 UIAlertView\cf11  \cf2 alloc\cf11 ] \cf2 initWithTitle\cf11 :\cf6 nil\cf11  \cf2 message\cf11 :\cf10 @"
+\f2 \'b3\'ac\'b9\'fd\'d7\'ee\'b4\'f3\'d7\'d6\'ca\'fd\'b2\'bb\'c4\'dc\'ca\'e4\'c8\'eb\'c1\'cb
+\f1 "\cf11  \cf2 delegate\cf11 :\cf6 nil\cf11  \cf2 cancelButtonTitle\cf11 :\cf10 @"Ok"\cf11  \cf2 otherButtonTitles\cf11 :\cf6 nil\cf11 , \cf6 nil\cf11 ];\
+            [alert \cf2 show\cf11 ];\
+            \cf6 return\cf11  \cf6 NO\cf11 ;\
+        \}\
+    \}\
+    \cf6 return\cf11  \cf6 YES\cf11 ;\
+\}\
+\
+\pard\tx626\pardeftab626\pardirnatural
+
+\f2\fs36 \cf0 \'d4\'da
+\f1 tableview
+\f2 \'c0\'ef\'c3\'e6\'cc\'ed\'bc\'d3\'d2\'bb\'d0\'a9\'cf\'c2\'c0\'ad\'cb\'a2\'d0\'c2\'a3\'ac\'c9\'cf\'c0\'b2\'bc\'d3\'d4\'d8\'b5\'c4\'b6\'ab\'ce\'f7
+\f1\fs26 \cf11 \
+              \cf7 EGORefreshTableHeaderView\cf11  *view = [[\cf7 EGORefreshTableHeaderView\cf11  \cf2 alloc\cf11 ] \cf2 initWithFrame\cf11 :\cf2 CGRectMake\cf11 (\cf4 0.0f\cf11 , \cf4 0.0f\cf11  - \cf7 myTableView3\cf11 .\cf2 bounds\cf11 .\cf2 size\cf11 .\cf2 height\cf11 , \cf7 myTableView3\cf11 .\cf2 frame\cf11 .\cf2 size\cf11 .\cf2 width\cf11 , \cf7 myTableView3\cf11 .\cf2 bounds\cf11 .\cf2 size\cf11 .\cf2 height\cf11 )];\
+                view.\cf7 delegate\cf11  = \cf6 self\cf11 ;\
+                \cf13 //    view.backgroundColor = RGBCOLOR(245, 246, 241);\cf11 \
+                [\cf7 myTableView3\cf11  \cf2 addSubview\cf11 :view];\
+                \cf7 _refreshHeaderView\cf11  = view;\
+                [\cf7 _refreshHeaderView\cf11  \cf7 refreshLastUpdatedDate\cf11 ];\
+                \
+                \cf7 LoadMoreTableFooterView\cf11  *footview = [[\cf7 LoadMoreTableFooterView\cf11  \cf2 alloc\cf11 ] \cf2 initWithFrame\cf11 :\cf2 CGRectMake\cf11 (\cf4 0.0f\cf11 ,\cf7 myTableView3\cf11 .\cf2 frame\cf11 .\cf2 size\cf11 .\cf2 height\cf11 , \cf7 myTableView3\cf11 .\cf2 frame\cf11 .\cf2 size\cf11 .\cf2 width\cf11 , \cf7 myTableView3\cf11 .\cf2 bounds\cf11 .\cf2 size\cf11 .\cf2 height\cf11 )];\
+                footview.\cf7 delegate\cf11  = \cf6 self\cf11 ;\
+                [\cf7 myTableView3\cf11  \cf2 addSubview\cf11 :footview];\
+                \cf7 _loadMoreFooterView\cf11  = footview;\
+\
+
+\f2\fs36 \cf0 \'d1\'d5\'c9\'ab\'d7\'aa\'bb\'bb
+\f1  IOS
+\f2 \'d6\'d0\'ca\'ae\'c1\'f9\'bd\'f8\'d6\'c6\'b5\'c4\'d1\'d5\'c9\'ab\'d7\'aa\'bb\'bb\'ce\'aa
+\f1 UIColor
+\fs26 \cf5 \
+\pard\tx626\pardeftab626\pardirnatural
+\cf11 - (\cf2 UIColor\cf11  *) colorWithHexString: (\cf2 NSString\cf11  *)color\
+\{\
+    \cf2 NSString\cf11  *cString = [[color \cf2 stringByTrimmingCharactersInSet\cf11 :[\cf2 NSCharacterSet\cf11  \cf2 whitespaceAndNewlineCharacterSet\cf11 ]] \cf2 uppercaseString\cf11 ];\
+    \
+    \cf13 // String should be 6 or 8 characters\cf11 \
+    \cf6 if\cf11  ([cString \cf2 length\cf11 ] < \cf4 6\cf11 ) \{\
+        \cf6 return\cf11  [\cf2 UIColor\cf11  \cf2 clearColor\cf11 ];\
+    \}\
+    \
+    \cf13 // strip 0X if it appears\cf11 \
+    \cf6 if\cf11  ([cString \cf2 hasPrefix\cf11 :\cf10 @"0X"\cf11 ])\
+        cString = [cString \cf2 substringFromIndex\cf11 :\cf4 2\cf11 ];\
+    \cf6 if\cf11  ([cString \cf2 hasPrefix\cf11 :\cf10 @"#"\cf11 ])\
+        cString = [cString \cf2 substringFromIndex\cf11 :\cf4 1\cf11 ];\
+    \cf6 if\cf11  ([cString \cf2 length\cf11 ] != \cf4 6\cf11 )\
+        \cf6 return\cf11  [\cf2 UIColor\cf11  \cf2 clearColor\cf11 ];\
+    \
+    \cf13 // Separate into r, g, b substrings\cf11 \
+    \cf2 NSRange\cf11  range;\
+    range.\cf2 location\cf11  = \cf4 0\cf11 ;\
+    range.\cf2 length\cf11  = \cf4 2\cf11 ;\
+    \
+    \cf13 //r\cf11 \
+    \cf2 NSString\cf11  *rString = [cString \cf2 substringWithRange\cf11 :range];\
+    \
+    \cf13 //g\cf11 \
+    range.\cf2 location\cf11  = \cf4 2\cf11 ;\
+    \cf2 NSString\cf11  *gString = [cString \cf2 substringWithRange\cf11 :range];\
+    \
+    \cf13 //b\cf11 \
+    range.\cf2 location\cf11  = \cf4 4\cf11 ;\
+    \cf2 NSString\cf11  *bString = [cString \cf2 substringWithRange\cf11 :range];\
+    \
+    \cf13 // Scan values\cf11 \
+    \cf6 unsigned\cf11  \cf6 int\cf11  r, g, b;\
+    [[\cf2 NSScanner\cf11  \cf2 scannerWithString\cf11 :rString] \cf2 scanHexInt\cf11 :&r];\
+    [[\cf2 NSScanner\cf11  \cf2 scannerWithString\cf11 :gString] \cf2 scanHexInt\cf11 :&g];\
+    [[\cf2 NSScanner\cf11  \cf2 scannerWithString\cf11 :bString] \cf2 scanHexInt\cf11 :&b];\
+    \
+    \cf6 return\cf11  [\cf2 UIColor\cf11  \cf2 colorWithRed\cf11 :((\cf6 float\cf11 ) r / \cf4 255.0f\cf11 ) \cf2 green\cf11 :((\cf6 float\cf11 ) g / \cf4 255.0f\cf11 ) \cf2 blue\cf11 :((\cf6 float\cf11 ) b / \cf4 255.0f\cf11 ) \cf2 alpha\cf11 :\cf4 1.0f\cf11 ];\
+\}\
+\pard\tx626\pardeftab626\pardirnatural
+\cf3 \
+\pard\tx626\pardeftab626\pardirnatural
+\cf1 \
+}
