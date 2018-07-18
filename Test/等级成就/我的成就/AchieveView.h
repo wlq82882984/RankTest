@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface AchieveView : UIView
+@property (weak, nonatomic) IBOutlet UIImageView *bgImg;
 
 @property (weak, nonatomic) IBOutlet UIImageView *iconView;
 @property (weak, nonatomic) IBOutlet UIImageView *levelView;

@@ -32,6 +32,7 @@
     [av.iconView setImage:[UIImage imageNamed:self.imgName2]];
     switch (i) {
         case 0:{
+            [av.bgImg setImage:[UIImage imageNamed:@"icon_rank_bg_01"]];
             [av.detailStr setText:[self.model objectForKey:@"OneStarMsg"]];
             if ([[self.model objectForKey:@"NowSpeed"] intValue] >= [[self.model objectForKey:@"OneStarValue"] intValue]) {
                 av.isOther = NO;
@@ -42,17 +43,18 @@
                 av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
                 [av.clickBtn addTarget:self action:@selector(snapshotScreenWithView:) forControlEvents:UIControlEventTouchUpInside];
             }else{
-                av.isOther = NO;
-                [av.iconView setImage:[UIImage imageNamed:self.imgName1]];
-                av.clickBtn.layer.borderWidth = 2;
-                av.clickBtn.layer.cornerRadius = 6;
-                av.clickBtn.tag = 200+i;
-                av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
-                [av.clickBtn addTarget:self action:@selector(snapshotScreenWithView:) forControlEvents:UIControlEventTouchUpInside];
+//                av.isOther = NO;
+//                [av.iconView setImage:[UIImage imageNamed:self.imgName1]];
+//                av.clickBtn.layer.borderWidth = 2;
+//                av.clickBtn.layer.cornerRadius = 6;
+//                av.clickBtn.tag = 200+i;
+//                av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
+//                [av.clickBtn addTarget:self action:@selector(snapshotScreenWithView:) forControlEvents:UIControlEventTouchUpInside];
             }
         }
             break;
         case 1:{
+            [av.bgImg setImage:[UIImage imageNamed:@"icon_rank_bg_02"]];
             [av.detailStr setText:[self.model objectForKey:@"TwoStarMsg"]];
             if ([[self.model objectForKey:@"NowSpeed"] intValue] >= [[self.model objectForKey:@"TwoStarValue"] intValue]) {
                 av.isOther = NO;
@@ -67,6 +69,7 @@
         }
             break;
         case 2:{
+            [av.bgImg setImage:[UIImage imageNamed:@"icon_rank_bg_03"]];
             [av.detailStr setText:[self.model objectForKey:@"ThreeStarMsg"]];
             if ([[self.model objectForKey:@"NowSpeed"] intValue] >= [[self.model objectForKey:@"ThreeStarValue"] intValue]) {
                 av.isOther = NO;

@@ -118,18 +118,34 @@
 //   https://api.meditool.cn/Apigrade/exprecords?userid={int}&usertoken={string}&cpage={int}  经验值记录
 //   https://api.meditool.cn/Apigrade/adduseredumsg?userid={int}&usertoken={string}&datatype={int}&userdata={string}   保存院校获奖论文信息
 - (void)getdata{
+//    Request *re = [Request shareInstance];
+//
+//    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+//    [dict setObject:@"2421" forKey:@"user_id"];   // 2421
+//    [dict setObject:@"505efe40adda1ac1c4b70097cd022bf2" forKey:@"usertoken"];    //505efe40adda1ac1c4b70097cd022bf2
+//
+//    NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/mygrade?userid=2421&usertoken=bcd907f30da4fc66eb933dc7b808fb84";
+//    [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
+//        NSDictionary *dict = [responseObject objectForKey:@"data"];
+//        NSArray *array = [dict objectForKey:@"grades"];
+//
+//        NSLog(@"%@",dict);
+//
+//    } failBlock:^(AFHTTPRequestOperation *operation, NSError *eror) {
+//
+//    }];
     Request *re = [Request shareInstance];
-
-    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    [dict setObject:@"2421" forKey:@"user_id"];   // 2421
-    [dict setObject:@"505efe40adda1ac1c4b70097cd022bf2" forKey:@"usertoken"];    //505efe40adda1ac1c4b70097cd022bf2
     
-    NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/mygrade?userid=2421&usertoken=bcd907f30da4fc66eb933dc7b808fb84";
-    [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
-        NSDictionary *dict = [responseObject objectForKey:@"data"];
-        NSArray *array = [dict objectForKey:@"grades"];
-        
-        NSLog(@"%@",dict);
+    NSMutableDictionary *postdic  = [NSMutableDictionary new];
+    [postdic setObject:@"593553" forKey:@"userid"];
+    [postdic setObject:@"81d39cb3e9167c24e1bd340f2944594b" forKey:@"usertoken"];
+    [postdic setObject:@"发发发帖子2" forKey:@"postingcontent"];
+    [postdic setObject:@"-5" forKey:@"dataid"];//帖子id
+    [postdic setObject:@"49" forKey:@"datatype"];//数据类型
+    [postdic setObject:@"0" forKey:@"fatherid"];//楼主发帖
+    
+    [re postRequestWithUrl:@"http://apitest.meditool.cn/apidiscuss/usercomment" params:postdic sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
+
         
     } failBlock:^(AFHTTPRequestOperation *operation, NSError *eror) {
         

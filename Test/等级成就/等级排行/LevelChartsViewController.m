@@ -8,6 +8,8 @@
 
 #import "LevelChartsViewController.h"
 #import "MyaappCV.h"
+#import "Request.h"
+
 #import "ExpLevelTableViewCell.h"
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 #define HEIGHT [[UIScreen mainScreen]bounds].size.height
@@ -271,9 +273,24 @@
 
 
 
-//   https://api.meditool.cn/Apigrade/graderank?userid={int}&usertoken={string}&datatype={int}&cpage={int}
+//   http://apitest.meditool.cn/Apigrade/graderank?userid={int}&usertoken={string}&datatype={int}&cpage={int}
 - (void)getdatawithType:(int)type andPage:(int)num{
+        Request *re = [Request shareInstance];
     
+        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+        [dict setObject:@"2421" forKey:@"user_id"];   // 2421
+        [dict setObject:@"505efe40adda1ac1c4b70097cd022bf2" forKey:@"usertoken"];    //505efe40adda1ac1c4b70097cd022bf2
+    
+        NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/graderank?userid=593553&usertoken=81d39cb3e9167c24e1bd340f2944594b&datatype=0&cpage=1";
+        [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
+            NSDictionary *dict = [responseObject objectForKey:@"data"];
+//            NSArray *array = [dict objectForKey:@"grades"];
+    
+            NSLog(@"%@",dict);
+    
+        } failBlock:^(AFHTTPRequestOperation *operation, NSError *eror) {
+    
+        }];
 }
 
 @end

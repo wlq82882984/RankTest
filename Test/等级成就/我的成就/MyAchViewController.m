@@ -50,7 +50,7 @@
     [dict setObject:@"" forKey:@"user_id"];   // 2421
     [dict setObject:@"" forKey:@"usertoken"];    //
     
-    NSString *urlStr = @"https://api.meditool.cn/Apigrade/myachieve?userid=2421&usertoken=bcd907f30da4fc66eb933dc7b808fb84&seluserid=2421";
+    NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/myachieve?userid=593553&usertoken=81d39cb3e9167c24e1bd340f2944594b&seluserid=593553";
     [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *dict = [responseObject objectForKey:@"data"];
         MyachArr = dict;

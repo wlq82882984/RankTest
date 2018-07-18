@@ -310,7 +310,7 @@
     [dict setObject:@"" forKey:@"user_id"];   // 2421
     [dict setObject:@"" forKey:@"usertoken"];    //
     
-    NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/mygrade?userid=598056&usertoken=237f0b946a5d19811d02248b4ef3a40d";
+    NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/mygrade?userid=593553&usertoken=81d39cb3e9167c24e1bd340f2944594b";
     [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSDictionary *dict = [responseObject objectForKey:@"data"];
         grades = [dict objectForKey:@"grades"];

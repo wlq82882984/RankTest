@@ -16,7 +16,7 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_cjbg" translatesAutoresizingMaskIntoConstraints="NO" id="iCf-sr-Aq7">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_rank_bg_01" translatesAutoresizingMaskIntoConstraints="NO" id="iCf-sr-Aq7">
                     <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1忠实用户灰" translatesAutoresizingMaskIntoConstraints="NO" id="6ep-ir-B1V">
@@ -155,19 +155,20 @@
             <connections>
                 <outlet property="achName" destination="pFH-x5-sSi" id="5fx-6v-aKk"/>
                 <outlet property="backBtn" destination="FfH-Ee-dAq" id="JP9-0y-ae0"/>
+                <outlet property="bgImg" destination="iCf-sr-Aq7" id="vCq-BG-vBC"/>
                 <outlet property="clickBtn" destination="xHB-96-2Zx" id="JW8-s9-GLH"/>
                 <outlet property="detailStr" destination="SIR-db-ue3" id="vlA-HN-VZx"/>
                 <outlet property="iconView" destination="6ep-ir-B1V" id="Cmb-Do-vfk"/>
                 <outlet property="levelView" destination="UZL-8H-q06" id="Sss-aJ-At1"/>
                 <outlet property="titleStr" destination="T0u-8J-g7g" id="Qyl-WN-QQL"/>
             </connections>
-            <point key="canvasLocation" x="-758" y="-159"/>
+            <point key="canvasLocation" x="-818" y="-171"/>
         </view>
     </objects>
     <resources>
         <image name="1忠实用户灰" width="392" height="378"/>
         <image name="1星" width="160" height="46"/>
-        <image name="icon_cjbg" width="720" height="1280"/>
+        <image name="icon_rank_bg_01" width="723" height="1285"/>
         <image name="icon_yiku_downloadcode" width="168" height="168"/>
         <image name="icon_yiku_logo" width="196" height="60"/>
     </resources>
