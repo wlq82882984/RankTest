@@ -12,7 +12,6 @@
 #import "MyAchViewController.h"
 #import "MLMCircleView.h"
 #import "MyRankViewController.h"
-#import "LevelChartsViewController.h"
 #import "MyNBSchoolViewController.h"
 #import "JobexpViewController.h"
 #import "WinlistsViewController.h"
@@ -57,13 +56,6 @@
 
 - (IBAction)gotoac:(UIButton *)sender {
     MyAchViewController *test = [[MyAchViewController alloc]init];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:test];
-    [self presentViewController:nav animated:YES completion:^{
-        
-    }];
-}
-- (IBAction)gogo:(id)sender {
-    LevelChartsViewController *test = [[LevelChartsViewController alloc]init];
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:test];
     [self presentViewController:nav animated:YES completion:^{
         

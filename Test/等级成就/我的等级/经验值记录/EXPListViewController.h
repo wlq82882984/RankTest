@@ -11,6 +11,6 @@
 @interface EXPListViewController : UIViewController
 
 @property(nonatomic,copy)NSMutableDictionary   *mygrade;     //  我的等级
-@property(nonatomic,copy)NSMutableArray        *grades;      //  专属权益列表
+@property(nonatomic,copy)NSString              *urlstr;
 
 @end

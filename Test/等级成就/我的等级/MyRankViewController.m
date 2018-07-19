@@ -10,6 +10,8 @@
 #import "MLMCircleView.h"
 #import "MyTaskTableViewCell.h"
 #import "ZhuanshuViewController.h"
+#import "LevelChartsViewController.h"
+#import "EXPListViewController.h"
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 #define HEIGHT [[UIScreen mainScreen]bounds].size.height
 
@@ -49,6 +51,15 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor blueColor];
     self.navigationController.navigationBar.shadowImage = nil;
+    
+    UIButton *btn = [[UIButton alloc]init];
+    [btn setImage:[UIImage imageNamed:@"icon_phb_b"] forState:UIControlStateNormal];
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(5, 15, 5, -15)];
+    btn.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    [btn addTarget:self action:@selector(golist) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:btn];
+    self.navigationItem.rightBarButtonItem.tintColor = [UIColor blueColor];
+    self.navigationController.navigationBar.shadowImage = nil;
 
     mainTable = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, WIDTH, HEIGHT - 64) style:UITableViewStyleGrouped];
     mainTable.delegate = self;
@@ -68,6 +79,13 @@
     [self getdata];
 }
 
+- (void)golist{
+    LevelChartsViewController *test = [[LevelChartsViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:test];
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
+}
 //获取图片名称   LegalRightName
 - (NSString *)getImgWithName:(NSString *)gradeId andisAccord:(BOOL)isAc{
     if ([gradeId isEqualToString:@"2"]){
@@ -332,6 +350,14 @@
         lab2.center = CGPointMake(circle.center.x, circle.center.y + 20) ;
         [lab2 setTextColor:[UIColor blueColor]];
         [headView addSubview:lab2];
+        
+        UIButton *btn11 = [[UIButton alloc]initWithFrame:CGRectMake(0, 20, 80, 100)];
+        btn11.center = lab.center;
+        [btn11 addTarget:self action:@selector(gotolistVi) forControlEvents:UIControlEventTouchUpInside];
+        btn11.alpha = 0.1;
+        
+        [headView addSubview:btn11];
+        
         int ExpNumEnd = 0;
         for (NSDictionary *item in grades) {
             QuanyiView *gradeView = [[QuanyiView alloc]init];
@@ -352,7 +378,7 @@
         UIButton *btn = [[UIButton alloc]init];
         float www = [UtilString getLabelsize:labStr andTextsize:12 andLabwidth:15].width/2 + circle.center.x;
         btn.frame = CGRectMake(www+5, circle.center.y +80, 15, 15);
-        [btn setImage:[UIImage imageNamed:@"icon_phb_third"] forState:UIControlStateNormal];
+        [btn setImage:[UIImage imageNamed:@"icon_yiwen_b"] forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(gotoWeb) forControlEvents:UIControlEventTouchUpInside];
         [headView addSubview:btn];
         
@@ -366,15 +392,35 @@
     }];
 }
 
+- (void)gotolistVi{
+    //        EXPListViewController
+    //        mygrade
+    EXPListViewController *vc = [[EXPListViewController alloc]init];
+    vc.mygrade = mygrade;
+    vc.urlstr = webUrl;
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 //前往游戏规则 这里到时候就调用webvc界面就行
 - (void)gotoWeb{
     UIWebView *vc = [[UIWebView alloc]init];
-    vc=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT - 70)];
+    vc=[[UIWebView alloc]initWithFrame:CGRectMake(0, 0, WIDTH, HEIGHT)];
     vc.delegate = self;
     vc.scalesPageToFit = YES;
     [vc loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:webUrl]]];
+    
+    UIViewController *dd = [[UIViewController alloc]init];
+    dd.title = @"升级说明";
+    dd.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
+    dd.navigationItem.leftBarButtonItem.tintColor = [UIColor blueColor];
+    [dd.view addSubview:vc];
 
-    [self.view addSubview:vc];
+    [self.navigationController pushViewController:dd animated:YES];
+}
+
+- (void)goback{
+    int i = (int)[self.navigationController viewControllers].count;
+    [self.navigationController popToViewController:[self.navigationController viewControllers][i-2] animated:YES];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{

@@ -158,9 +158,12 @@
                 <outlet property="bgImg" destination="iCf-sr-Aq7" id="vCq-BG-vBC"/>
                 <outlet property="clickBtn" destination="xHB-96-2Zx" id="JW8-s9-GLH"/>
                 <outlet property="detailStr" destination="SIR-db-ue3" id="vlA-HN-VZx"/>
+                <outlet property="erweima" destination="DMy-3Y-1yM" id="jDc-aS-8mO"/>
                 <outlet property="iconView" destination="6ep-ir-B1V" id="Cmb-Do-vfk"/>
                 <outlet property="levelView" destination="UZL-8H-q06" id="Sss-aJ-At1"/>
                 <outlet property="titleStr" destination="T0u-8J-g7g" id="Qyl-WN-QQL"/>
+                <outlet property="tt1" destination="UgU-gu-TUf" id="2FU-Aa-wDN"/>
+                <outlet property="tt2" destination="eHf-HT-0vd" id="eXf-45-luq"/>
             </connections>
             <point key="canvasLocation" x="-818" y="-171"/>
         </view>

@@ -127,7 +127,7 @@
                 <outlet property="levelview" destination="eBW-AG-iRp" id="fuH-Zi-lEX"/>
                 <outlet property="titleLab" destination="65N-W7-9nM" id="RaB-0c-gHa"/>
             </connections>
-            <point key="canvasLocation" x="-308" y="75"/>
+            <point key="canvasLocation" x="-184" y="26"/>
         </view>
     </objects>
     <resources>

@@ -10,4 +10,19 @@
 
 @interface ExpLevelTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *paihang;
+@property (weak, nonatomic) IBOutlet UIImageView *iconName;
+@property (weak, nonatomic) IBOutlet UIImageView *idVip;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *levelNum;
+@property (weak, nonatomic) IBOutlet UILabel *expNum;
+
+
+
+
+
+
+
+
+
 @end

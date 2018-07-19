@@ -81,6 +81,8 @@
 		37637DE020EB01ED0099F306 /* Photos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37637DDF20EB01ED0099F306 /* Photos.framework */; };
 		37637DE220EB01FD0099F306 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37637DE120EB01FD0099F306 /* AssetsLibrary.framework */; };
 		37776FE820EF404F00EFAF08 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37776FE720EF404F00EFAF08 /* Social.framework */; };
+		37829B1520FF3E1F00B6508D /* LevePersonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37829B1420FF3E1F00B6508D /* LevePersonView.xib */; };
+		37829B1820FF3E9100B6508D /* LevePersonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 37829B1720FF3E9100B6508D /* LevePersonView.m */; };
 		37BE7BA320E0879A006FD0E3 /* 闪屏动画改.gif in Resources */ = {isa = PBXBuildFile; fileRef = 37BE7BA220E0879A006FD0E3 /* 闪屏动画改.gif */; };
 		37BE7BAB20E0CC45006FD0E3 /* MyNBSchoolViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BE7BAA20E0CC45006FD0E3 /* MyNBSchoolViewController.m */; };
 		37BE7BAE20E0DBEA006FD0E3 /* JobexpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37BE7BAD20E0DBEA006FD0E3 /* JobexpViewController.m */; };
@@ -228,6 +230,9 @@
 		37637DDF20EB01ED0099F306 /* Photos.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Photos.framework; path = System/Library/Frameworks/Photos.framework; sourceTree = SDKROOT; };
 		37637DE120EB01FD0099F306 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		37776FE720EF404F00EFAF08 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		37829B1420FF3E1F00B6508D /* LevePersonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevePersonView.xib; sourceTree = "<group>"; };
+		37829B1620FF3E9100B6508D /* LevePersonView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LevePersonView.h; sourceTree = "<group>"; };
+		37829B1720FF3E9100B6508D /* LevePersonView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LevePersonView.m; sourceTree = "<group>"; };
 		37BE7BA220E0879A006FD0E3 /* 闪屏动画改.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "闪屏动画改.gif"; sourceTree = "<group>"; };
 		37BE7BA920E0CC45006FD0E3 /* MyNBSchoolViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyNBSchoolViewController.h; sourceTree = "<group>"; };
 		37BE7BAA20E0CC45006FD0E3 /* MyNBSchoolViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyNBSchoolViewController.m; sourceTree = "<group>"; };
@@ -619,11 +624,14 @@
 				37496A5220D210AB00FF0E13 /* MyaappCV.h */,
 				37496A5320D210AB00FF0E13 /* MyaappCV.m */,
 				37496A5020D2108800FF0E13 /* View.xib */,
-				37D9201C20DA55D6005F6978 /* LevelChartsViewController.h */,
-				37D9201D20DA55D6005F6978 /* LevelChartsViewController.m */,
+				37829B1620FF3E9100B6508D /* LevePersonView.h */,
+				37829B1720FF3E9100B6508D /* LevePersonView.m */,
+				37829B1420FF3E1F00B6508D /* LevePersonView.xib */,
 				375A90F820DB9D2500BB0597 /* ExpLevelTableViewCell.h */,
 				375A90F920DB9D2500BB0597 /* ExpLevelTableViewCell.m */,
 				375A90F720DB9D2500BB0597 /* ExpLevelTableViewCell.xib */,
+				37D9201C20DA55D6005F6978 /* LevelChartsViewController.h */,
+				37D9201D20DA55D6005F6978 /* LevelChartsViewController.m */,
 			);
 			path = "等级排行";
 			sourceTree = "<group>";
@@ -694,6 +702,7 @@
 				37496A5120D2108800FF0E13 /* View.xib in Resources */,
 				37D9201A20DA42CC005F6978 /* MyTaskTableViewCell.xib in Resources */,
 				375C546520D3A7FE00863085 /* redDot.png in Resources */,
+				37829B1520FF3E1F00B6508D /* LevePersonView.xib in Resources */,
 				375C546120D3A7FE00863085 /* brightDot.png in Resources */,
 				375B8FAE20D895B500E0679C /* README.md in Resources */,
 				375C544020D38D2C00863085 /* UpLevelView.xib in Resources */,
@@ -775,6 +784,7 @@
 				375B8FC520D8AACD00E0679C /* UIViewController+HUD.m in Sources */,
 				375B8FC820D8D53C00E0679C /* UtilString.m in Sources */,
 				375C546420D3A7FE00863085 /* MLMCircleView.m in Sources */,
+				37829B1820FF3E9100B6508D /* LevePersonView.m in Sources */,
 				375C546620D3A7FE00863085 /* MLMStatisticalView.m in Sources */,
 				375B8FA520D895B500E0679C /* AFSecurityPolicy.m in Sources */,
 				37BE7BAE20E0DBEA006FD0E3 /* JobexpViewController.m in Sources */,

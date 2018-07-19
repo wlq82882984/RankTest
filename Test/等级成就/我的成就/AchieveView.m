@@ -14,6 +14,10 @@
     self = [super init];
     if (self) {
         self = [[[NSBundle mainBundle] loadNibNamed:@"AchieveView" owner:nil options:nil] objectAtIndex:0];
+        _tt1.hidden = YES;
+        _achName.hidden = YES;
+        _tt2.hidden = YES;
+        _erweima.hidden = YES;
     }
     return self;
 }

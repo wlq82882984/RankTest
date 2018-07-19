@@ -42,6 +42,10 @@
                 av.clickBtn.tag = 200+i;
                 av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
                 [av.clickBtn addTarget:self action:@selector(snapshotScreenWithView:) forControlEvents:UIControlEventTouchUpInside];
+                av.erweima.hidden = NO;
+                av.tt1.hidden = NO;
+                av.achName.hidden = NO;
+                av.tt2.hidden = NO;
             }else{
 //                av.isOther = NO;
 //                [av.iconView setImage:[UIImage imageNamed:self.imgName1]];
@@ -64,6 +68,10 @@
                 av.clickBtn.layer.cornerRadius = 6;
                 av.clickBtn.tag = 200+i;
                 av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
+                av.erweima.hidden = NO;
+                av.tt1.hidden = NO;
+                av.achName.hidden = NO;
+                av.tt2.hidden = NO;
             }else{
             }
         }
@@ -79,6 +87,10 @@
                 av.clickBtn.layer.cornerRadius = 6;
                 av.clickBtn.tag = 200+i;
                 av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
+                av.erweima.hidden = NO;
+                av.tt1.hidden = NO;
+                av.achName.hidden = NO;
+                av.tt2.hidden = NO;
             }else{
             }
         }
@@ -119,6 +131,10 @@
     av.frame = CGRectMake(0, 0, WIDTH, HEIGH);
     av.backBtn.hidden = YES;
     av.clickBtn.hidden = YES;
+    av.erweima.hidden = NO;
+    av.tt1.hidden = NO;
+    av.achName.hidden = NO;
+    av.tt2.hidden = NO;
     UIGraphicsBeginImageContextWithOptions(av.frame.size, NO, [UIScreen mainScreen].scale);
 //    UIGraphicsBeginImageContextWithOptions(av.frame.size, NO, 0);
     [av drawViewHierarchyInRect:av.frame afterScreenUpdates:YES];

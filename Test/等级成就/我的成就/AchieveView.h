@@ -15,10 +15,14 @@
 @property (weak, nonatomic) IBOutlet UIImageView *levelView;
 @property (weak, nonatomic) IBOutlet UILabel *titleStr;
 @property (weak, nonatomic) IBOutlet UILabel *detailStr;
+@property (weak, nonatomic) IBOutlet UIImageView *erweima;
+@property (weak, nonatomic) IBOutlet UILabel *tt1;
 @property (weak, nonatomic) IBOutlet UILabel *achName;
+@property (weak, nonatomic) IBOutlet UILabel *tt2;
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 
 @property (weak, nonatomic) IBOutlet UIButton *clickBtn;
+
 @property (nonatomic,assign)BOOL isOther;  // 判断是否是自己的成就页面跳转  默认是NO
 
 @end

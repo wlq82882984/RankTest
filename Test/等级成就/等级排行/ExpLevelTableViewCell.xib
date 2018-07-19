@@ -37,9 +37,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9c-Wf-0Y2">
-                        <rect key="frame" x="281" y="22.5" width="80" height="15"/>
+                        <rect key="frame" x="281" y="22.5" width="70" height="15"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="80" id="9qz-ik-dvw"/>
+                            <constraint firstAttribute="width" constant="70" id="9qz-ik-dvw"/>
                             <constraint firstAttribute="height" constant="15" id="GsP-Kl-Ucz"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -54,34 +54,52 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="自己" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pQ2-8V-miM">
-                        <rect key="frame" x="96" y="21" width="80" height="16"/>
+                        <rect key="frame" x="86" y="21" width="110" height="16"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="16" id="uap-Ah-cwS"/>
-                            <constraint firstAttribute="width" constant="80" id="wTK-08-mWP"/>
+                            <constraint firstAttribute="width" constant="110" id="wTK-08-mWP"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="accOKSet" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-O5-b9h">
+                        <rect key="frame" x="60" y="27" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="CDr-Kq-4GR"/>
+                            <constraint firstAttribute="height" constant="25" id="tXt-qm-k4x"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="pQ2-8V-miM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="80" id="K9b-aQ-uXT"/>
+                    <constraint firstItem="QO9-O5-b9h" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="60" id="CbR-WA-akW"/>
+                    <constraint firstItem="pQ2-8V-miM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="K9b-aQ-uXT"/>
                     <constraint firstItem="ri0-yt-iyI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="180" id="TC0-2N-jfg"/>
                     <constraint firstItem="pQ2-8V-miM" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="aiI-Bf-9ch"/>
                     <constraint firstItem="ri0-yt-iyI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="apL-Ai-1YQ"/>
                     <constraint firstItem="Z9c-Wf-0Y2" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="gut-UO-Nky"/>
                     <constraint firstItem="CDO-SC-wJ0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="kJa-I3-3k8"/>
                     <constraint firstItem="CDO-SC-wJ0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="40" id="lT8-cO-EbO"/>
+                    <constraint firstItem="QO9-O5-b9h" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="10" id="lVc-xL-YBO"/>
                     <constraint firstItem="Ad5-ny-N77" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="pM4-9x-rNi"/>
                     <constraint firstItem="Ad5-ny-N77" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="qwA-bj-3C2"/>
-                    <constraint firstItem="Z9c-Wf-0Y2" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="10" id="wpu-yo-hzg"/>
+                    <constraint firstItem="Z9c-Wf-0Y2" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="wpu-yo-hzg"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="-161.5" y="-22"/>
+            <connections>
+                <outlet property="expNum" destination="Z9c-Wf-0Y2" id="nBz-ke-Set"/>
+                <outlet property="iconName" destination="CDO-SC-wJ0" id="KiT-QN-pC8"/>
+                <outlet property="idVip" destination="QO9-O5-b9h" id="pLw-wR-PLZ"/>
+                <outlet property="levelNum" destination="ri0-yt-iyI" id="aJF-XI-ZUf"/>
+                <outlet property="paihang" destination="Ad5-ny-N77" id="D7S-fq-dc4"/>
+                <outlet property="userName" destination="pQ2-8V-miM" id="ydN-q2-QXi"/>
+            </connections>
+            <point key="canvasLocation" x="-218" y="-64"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="4" width="60" height="60"/>
+        <image name="accOKSet" width="20" height="18"/>
     </resources>
 </document>
