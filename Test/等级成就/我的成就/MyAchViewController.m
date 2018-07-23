@@ -54,6 +54,7 @@
     [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *dict = [responseObject objectForKey:@"data"];
         MyachArr = dict;
+        [levelLab setText:[NSString stringWithFormat:@"%@星成就",[responseObject objectForKey:@"starnum"]]];
         [self drawScrollItem];
         
         

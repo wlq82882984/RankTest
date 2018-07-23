@@ -411,7 +411,7 @@
     
     UIViewController *dd = [[UIViewController alloc]init];
     dd.title = @"升级说明";
-    dd.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
+    dd.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"icon_back_b"] style:UIBarButtonItemStyleDone target:self action:@selector(goback)];
     dd.navigationItem.leftBarButtonItem.tintColor = [UIColor blueColor];
     [dd.view addSubview:vc];
 

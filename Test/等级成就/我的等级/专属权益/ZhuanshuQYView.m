@@ -19,6 +19,7 @@
 }
 
 - (void)setModel:(NSDictionary *)model{
+    
     _model = model;
     [self.ttLab setText:[model objectForKey:@"LegalRightName"]];
     [self.llLab setText:[NSString stringWithFormat:@"LV.%@",[model objectForKey:@"GradeNum"]]];
