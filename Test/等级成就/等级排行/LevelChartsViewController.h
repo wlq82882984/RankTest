@@ -10,6 +10,6 @@
 
 @interface LevelChartsViewController : UIViewController
 
-@property (nonatomic,copy)NSString            *listType;    // 排行榜类型
+@property (nonatomic,copy)NSString            *listType;    // 排行榜类型  是等级还是成就
 
 @end

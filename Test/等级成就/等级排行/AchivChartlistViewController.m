@@ -1,12 +1,12 @@
 //
-//  LevelChartsViewController.m
+//  AchivChartlistViewController.m
 //  Test
 //
-//  Created by wlq on 2018/6/20.
+//  Created by wlq on 2018/7/23.
 //  Copyright © 2018年 wlq. All rights reserved.
 //
 
-#import "LevelChartsViewController.h"
+#import "AchivChartlistViewController.h"
 #import "MyaappCV.h"
 #import "Request.h"
 #import "LevePersonView.h"
@@ -15,7 +15,13 @@
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 #define HEIGHT [[UIScreen mainScreen]bounds].size.height
 
-@interface LevelChartsViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
+//"UserID": "3502",
+//"StarNum": "3",
+//"NickName": "summer",
+//"UserImage": "http://user-img.meditool.cn/20170301/3502_E4647393-B698-18C5-C88C-4FCCBD489FD8.png",
+//"IsCertification": 2
+
+@interface AchivChartlistViewController ()<UIScrollViewDelegate,UITableViewDelegate,UITableViewDataSource>{
     NSMutableArray         *allListArray;             //总排行
     NSMutableArray         *frendsListArray;          //好友排行
     
@@ -30,8 +36,7 @@
     UIImageView       *iconPic;     //用户头像
     UIImageView       *vipPic;
     UILabel           *nickName;
-    UILabel           *levelLab;     //等级
-    UILabel           *expLab;       //经验
+    UILabel           *expLab;       //星数
     
     int                pageA;
     int                pageB;
@@ -48,7 +53,7 @@
 
 @end
 
-@implementation LevelChartsViewController
+@implementation AchivChartlistViewController
 
 - (void)back{
     [self dismissViewControllerAnimated:YES completion:^{
@@ -60,8 +65,8 @@
     [super viewDidLoad];
     
     self.view.backgroundColor = [UIColor lightGrayColor];
-
-    self.title = @"等级排行榜";
+    
+    self.title = @"成就排行榜";
     self.navigationController.navigationBar.translucent = NO;
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"back_icon"] style:UIBarButtonItemStyleDone target:self action:@selector(back)];
     self.navigationItem.leftBarButtonItem.tintColor = [UIColor blackColor];
@@ -75,7 +80,7 @@
     self.automaticallyAdjustsScrollViewInsets = NO;
     [self initScrollerView];
     [self initTableViews];
-//    [self getdatawithType:0 andPage:1];
+    //    [self getdatawithType:0 andPage:1];
 }
 
 //   皇冠(50,65)
@@ -90,7 +95,7 @@
     segmented.layer.masksToBounds = YES;
     segmented.layer.cornerRadius = 15;
     segmented.layer.borderWidth = 1;
-    segmented.layer.borderColor = [UIColor lightGrayColor].CGColor; 
+    segmented.layer.borderColor = [UIColor lightGrayColor].CGColor;
     [segmented setTintColor:[UIColor lightGrayColor]];
     [segmented setSelectedSegmentIndex:0];
     
@@ -181,14 +186,6 @@
     nickName.font = [UIFont systemFontOfSize:15];
     nickName.textAlignment = NSTextAlignmentLeft;
     
-    levelLab = [[UILabel alloc]init];
-    levelLab.frame = CGRectMake(180, 230, 50, 15);
-    levelLab.backgroundColor = [UIColor whiteColor];
-    levelLab.text = @"LV.1";
-    levelLab.textColor = [UIColor blackColor];
-    levelLab.font = [UIFont systemFontOfSize:14];
-    levelLab.textAlignment = NSTextAlignmentCenter;
-    
     expLab = [[UILabel alloc]init];
     expLab.frame = CGRectMake(WIDTH - 100, 230, 85, 15);
     expLab.backgroundColor = [UIColor whiteColor];
@@ -196,12 +193,11 @@
     expLab.textColor = [UIColor blackColor];
     expLab.font = [UIFont systemFontOfSize:14];
     expLab.textAlignment = NSTextAlignmentRight;
-
+    
     [headView addSubview:front];
     [headView addSubview:iconPic];
     [headView addSubview:vipPic];
     [headView addSubview:nickName];
-    [headView addSubview:levelLab];
     [headView addSubview:expLab];
     [self.view addSubview:headView];
 }
@@ -257,25 +253,22 @@
             firlab.hidden = NO;
             firplace.hidden = NO;
             [firplace.headvv setImage:[UIImage imageNamed:@"1"]];
-            [firlab.leNum setText:[model objectForKey:@"GradeNum"]];
             [firlab.niName setText:[model objectForKey:@"NickName"]];
-            [firlab.expNum setText:[model objectForKey:@"ExpNum"]];
+            [firlab.expNum setText:[model objectForKey:@"StarNum"]];
             if (allListArray.count >= 2) {
                 NSDictionary *model = allListArray[1];
                 selab.hidden = NO;
                 seplace.hidden = NO;
                 [seplace.headvv setImage:[UIImage imageNamed:@"2"]];
-                [selab.leNum setText:[model objectForKey:@"GradeNum"]];
                 [selab.niName setText:[model objectForKey:@"NickName"]];
-                [selab.expNum setText:[model objectForKey:@"ExpNum"]];
+                [selab.expNum setText:[model objectForKey:@"StarNum"]];
                 if (allListArray.count >= 3) {
                     NSDictionary *model = allListArray[2];
                     thlab.hidden = NO;
                     thplace.hidden = NO;
                     [thplace.headvv setImage:[UIImage imageNamed:@"3"]];
-                    [thlab.leNum setText:[model objectForKey:@"GradeNum"]];
                     [thlab.niName setText:[model objectForKey:@"NickName"]];
-                    [thlab.expNum setText:[model objectForKey:@"ExpNum"]];
+                    [thlab.expNum setText:[model objectForKey:@"StarNum"]];
                 }
             }
         }
@@ -286,25 +279,25 @@
             firlab.hidden = NO;
             firplace.hidden = NO;
             [firplace.headvv setImage:[UIImage imageNamed:@"1"]];
-            [firlab.leNum setText:[model objectForKey:@"GradeNum"]];
+            
             [firlab.niName setText:[model objectForKey:@"NickName"]];
-            [firlab.expNum setText:[model objectForKey:@"ExpNum"]];
+            [firlab.expNum setText:[model objectForKey:@"StarNum"]];
             if (allListArray.count >= 2) {
                 NSDictionary *model = allListArray[1];
                 selab.hidden = NO;
                 seplace.hidden = NO;
                 [seplace.headvv setImage:[UIImage imageNamed:@"2"]];
-                [selab.leNum setText:[model objectForKey:@"GradeNum"]];
+                
                 [selab.niName setText:[model objectForKey:@"NickName"]];
-                [selab.expNum setText:[model objectForKey:@"ExpNum"]];
+                [selab.expNum setText:[model objectForKey:@"StarNum"]];
                 if (allListArray.count >= 3) {
                     NSDictionary *model = allListArray[2];
                     thlab.hidden = NO;
                     thplace.hidden = NO;
                     [thplace.headvv setImage:[UIImage imageNamed:@"3"]];
-                    [thlab.leNum setText:[model objectForKey:@"GradeNum"]];
+                    
                     [thlab.niName setText:[model objectForKey:@"NickName"]];
-                    [thlab.expNum setText:[model objectForKey:@"ExpNum"]];
+                    [thlab.expNum setText:[model objectForKey:@"StarNum"]];
                 }
             }
         }
@@ -369,10 +362,9 @@
             cell.idVip.hidden = NO;
         }else{}
         [cell.paihang setText:[NSString stringWithFormat:@"%i",(int)indexPath.row+1]];
-//        [cell.iconName setImage:@""];
+        //        [cell.iconName setImage:@""];
         [cell.userName setText:[model objectForKey:@"NickName"]];
-        [cell.levelNum setText:[model objectForKey:@"GradeNum"]];
-        [cell.expNum setText:[model objectForKey:@"ExpNum"]];
+        [cell.expNum setText:[model objectForKey:@"StarNum"]];
         
     }else{
         NSDictionary *model = frendsListArray[indexPath.row];
@@ -382,8 +374,7 @@
         [cell.paihang setText:[NSString stringWithFormat:@"%i",(int)indexPath.row+1]];
         //        [cell.iconName setImage:@""];
         [cell.userName setText:[model objectForKey:@"NickName"]];
-        [cell.levelNum setText:[model objectForKey:@"GradeNum"]];
-        [cell.expNum setText:[model objectForKey:@"ExpNum"]];
+        [cell.expNum setText:[model objectForKey:@"StarNum"]];
     }
     
     return cell;
@@ -391,61 +382,59 @@
 
 //   http://apitest.meditool.cn/Apigrade/graderank?userid={int}&usertoken={string}&datatype={int}&cpage={int}
 - (void)getdatawithType:(int)type andPage:(int)num{
-        Request *re = [Request shareInstance];
+    Request *re = [Request shareInstance];
     
-        NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-        [dict setObject:@"2421" forKey:@"user_id"];   // 2421
-        [dict setObject:@"505efe40adda1ac1c4b70097cd022bf2" forKey:@"usertoken"];    //505efe40adda1ac1c4b70097cd022bf2
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    [dict setObject:@"2421" forKey:@"user_id"];   // 2421
+    [dict setObject:@"505efe40adda1ac1c4b70097cd022bf2" forKey:@"usertoken"];    //505efe40adda1ac1c4b70097cd022bf2
     
-        NSString *urlStr = [NSString stringWithFormat:@"http://apitest.meditool.cn/Apigrade/graderank?userid=593553&usertoken=81d39cb3e9167c24e1bd340f2944594b&datatype=%i&cpage=%i",type,num];
-        [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
-            NSMutableArray *dict = [responseObject objectForKey:@"data"];
-            NSDictionary *userdata = [responseObject objectForKey:@"userdata"];
-//            NSArray *array = [dict objectForKey:@"grades"];
-             NSLog(@"%@-----------%@",dict,userdata);
-            if (type == 0) { // 全部
-                if (num == 1) {
-                    [allListArray removeAllObjects];
-                }
-                [dict enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                    [allListArray addObject:obj];
-                }];
-                [self qiehuanWithType:type];
-                
-//          RankNum  NickName  IsCertification  GradeNum  ExpNum  UserImage
+    NSString *urlStr = @"http://apitest.meditool.cn/Apigrade/achieverank?userid=593553&usertoken=81d39cb3e9167c24e1bd340f2944594b&datatype=0&cpage=1";
+    [re GetRequestWithUrl:urlStr params:nil sucessBlock:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *dict = [responseObject objectForKey:@"data"];
+        NSDictionary *userdata = [responseObject objectForKey:@"userdata"];
+        //            NSArray *array = [dict objectForKey:@"grades"];
+        NSLog(@"%@-----------%@",dict,userdata);
+        if (type == 0) { // 全部
+            if (num == 1) {
+                [allListArray removeAllObjects];
+            }
+            [dict enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [allListArray addObject:obj];
+            }];
+            [self qiehuanWithType:type];
+            
+            //          RankNum  NickName  IsCertification  GradeNum  ExpNum  UserImage
             [front setText:[NSString stringWithFormat:@"%i",[[userdata objectForKey:@"RankNum"] intValue]+1]];
             [nickName setText:[userdata objectForKey:@"NickName"]];
-            [levelLab setText:[userdata objectForKey:@"GradeNum"]];
             if ([[userdata objectForKey:@"IsCertification"] intValue] == 2) {
                 vipPic.hidden = NO;
             }else{
                 vipPic.hidden = YES;
             }
-            [expLab setText:[userdata objectForKey:@"ExpNum"]];
+            [expLab setText:[userdata objectForKey:@"StarNum"]];
             [allTable reloadData];
-         }else{   // 好友
+        }else{   // 好友
             if (num == 1) {
                 [frendsListArray removeAllObjects];
             }
-             // 一系列的操作和all类似
-             [dict enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                 [frendsListArray addObject:obj];
-             }];
-             [self qiehuanWithType:type];
-             [front setText:[NSString stringWithFormat:@"%i",[[userdata objectForKey:@"RankNum"] intValue]+1]];
-             [nickName setText:[userdata objectForKey:@"NickName"]];
-             [levelLab setText:[userdata objectForKey:@"GradeNum"]];
-             if ([[userdata objectForKey:@"IsCertification"] intValue] == 2) {
-                 vipPic.hidden = NO;
-             }else{
-                 vipPic.hidden = YES;
-             }
-             [expLab setText:[userdata objectForKey:@"ExpNum"]];
-             [frendsTable reloadData];
-         }
-        } failBlock:^(AFHTTPRequestOperation *operation, NSError *eror) {
-    
-        }];
+            // 一系列的操作和all类似
+            [dict enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                [frendsListArray addObject:obj];
+            }];
+            [self qiehuanWithType:type];
+            [front setText:[NSString stringWithFormat:@"%i",[[userdata objectForKey:@"RankNum"] intValue]+1]];
+            [nickName setText:[userdata objectForKey:@"NickName"]];
+            if ([[userdata objectForKey:@"IsCertification"] intValue] == 2) {
+                vipPic.hidden = NO;
+            }else{
+                vipPic.hidden = YES;
+            }
+            [expLab setText:[userdata objectForKey:@"StarNum"]];
+            [frendsTable reloadData];
+        }
+    } failBlock:^(AFHTTPRequestOperation *operation, NSError *eror) {
+        
+    }];
 }
 
 @end

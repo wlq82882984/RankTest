@@ -16,6 +16,7 @@
 		374991BE20D0FCBB00AB2052 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374991BD20D0FCBB00AB2052 /* ViewController.m */; };
 		374991C120D0FCBB00AB2052 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 374991BF20D0FCBB00AB2052 /* Main.storyboard */; };
 		374991C920D0FCBD00AB2052 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 374991C820D0FCBD00AB2052 /* main.m */; };
+		374C67D72105AE7D004139EA /* AchivChartlistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374C67D62105AE7D004139EA /* AchivChartlistViewController.m */; };
 		374D01D020DB321E004890B7 /* ZhuanshuQYView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 374D01CF20DB321E004890B7 /* ZhuanshuQYView.xib */; };
 		374D01D320DB323D004890B7 /* ZhuanshuQYView.m in Sources */ = {isa = PBXBuildFile; fileRef = 374D01D220DB323D004890B7 /* ZhuanshuQYView.m */; };
 		374D01D920DB3B5F004890B7 /* ZhuanshuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 374D01D820DB3B5F004890B7 /* ZhuanshuViewController.m */; };
@@ -116,6 +117,8 @@
 		374991C020D0FCBB00AB2052 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		374991C720D0FCBD00AB2052 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		374991C820D0FCBD00AB2052 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		374C67D52105AE7D004139EA /* AchivChartlistViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AchivChartlistViewController.h; sourceTree = "<group>"; };
+		374C67D62105AE7D004139EA /* AchivChartlistViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AchivChartlistViewController.m; sourceTree = "<group>"; };
 		374D01CF20DB321E004890B7 /* ZhuanshuQYView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZhuanshuQYView.xib; sourceTree = "<group>"; };
 		374D01D120DB323D004890B7 /* ZhuanshuQYView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZhuanshuQYView.h; sourceTree = "<group>"; };
 		374D01D220DB323D004890B7 /* ZhuanshuQYView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZhuanshuQYView.m; sourceTree = "<group>"; };
@@ -621,6 +624,10 @@
 		37D9202120DA5624005F6978 /* 等级排行 */ = {
 			isa = PBXGroup;
 			children = (
+				37D9201C20DA55D6005F6978 /* LevelChartsViewController.h */,
+				37D9201D20DA55D6005F6978 /* LevelChartsViewController.m */,
+				374C67D52105AE7D004139EA /* AchivChartlistViewController.h */,
+				374C67D62105AE7D004139EA /* AchivChartlistViewController.m */,
 				37496A5220D210AB00FF0E13 /* MyaappCV.h */,
 				37496A5320D210AB00FF0E13 /* MyaappCV.m */,
 				37496A5020D2108800FF0E13 /* View.xib */,
@@ -630,8 +637,6 @@
 				375A90F820DB9D2500BB0597 /* ExpLevelTableViewCell.h */,
 				375A90F920DB9D2500BB0597 /* ExpLevelTableViewCell.m */,
 				375A90F720DB9D2500BB0597 /* ExpLevelTableViewCell.xib */,
-				37D9201C20DA55D6005F6978 /* LevelChartsViewController.h */,
-				37D9201D20DA55D6005F6978 /* LevelChartsViewController.m */,
 			);
 			path = "等级排行";
 			sourceTree = "<group>";
@@ -744,6 +749,7 @@
 				375B8FC120D89A2800E0679C /* MBProgressHUD.m in Sources */,
 				375B8FCB20D8D56900E0679C /* MyRankViewController.m in Sources */,
 				37496A6020D2664B00FF0E13 /* MyAchieveView.m in Sources */,
+				374C67D72105AE7D004139EA /* AchivChartlistViewController.m in Sources */,
 				37BE7BBA20E0E95F006FD0E3 /* AddAcadPaperViewController.m in Sources */,
 				374FD99E20E334ED008E6E52 /* PrintObject.m in Sources */,
 				374FD99120E324B3008E6E52 /* MedicalSchoolsModel.m in Sources */,

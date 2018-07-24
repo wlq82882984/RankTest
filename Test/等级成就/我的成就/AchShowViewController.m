@@ -47,13 +47,13 @@
                 av.achName.hidden = NO;
                 av.tt2.hidden = NO;
             }else{
-//                av.isOther = NO;
-//                [av.iconView setImage:[UIImage imageNamed:self.imgName1]];
-//                av.clickBtn.layer.borderWidth = 2;
-//                av.clickBtn.layer.cornerRadius = 6;
-//                av.clickBtn.tag = 200+i;
-//                av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
-//                [av.clickBtn addTarget:self action:@selector(snapshotScreenWithView:) forControlEvents:UIControlEventTouchUpInside];
+                av.isOther = NO;
+                [av.iconView setImage:[UIImage imageNamed:self.imgName1]];
+                av.clickBtn.layer.borderWidth = 2;
+                av.clickBtn.layer.cornerRadius = 6;
+                av.clickBtn.tag = 200+i;
+                av.clickBtn.layer.borderColor = [UIColor yellowColor].CGColor; //253,192,45
+                [av.clickBtn addTarget:self action:@selector(snapshotScreenWithView:) forControlEvents:UIControlEventTouchUpInside];
             }
         }
             break;
@@ -105,16 +105,16 @@
 
 - (void)drawscrview{
     mainScrolView = [[UIScrollView alloc]init];
-    mainScrolView.frame = CGRectMake( 0, 0, WIDTH, HEIGH);
+    mainScrolView.frame = CGRectMake( 0, -20, WIDTH, HEIGH+20);
     [self.view addSubview:mainScrolView];
-    mainScrolView.contentSize = CGSizeMake(WIDTH*3, HEIGH);
+    mainScrolView.contentSize = CGSizeMake(WIDTH*3, HEIGH+20);
     mainScrolView.bounces = NO;
     mainScrolView.pagingEnabled = YES;
     mainScrolView.showsHorizontalScrollIndicator = NO;
     
     for (int i = 0; i<3; i++) {
         AchieveView *av = [self setAchiView:i];
-        av.frame = CGRectMake( WIDTH*i, 0, WIDTH, HEIGH);
+        av.frame = CGRectMake( WIDTH*i, 0, WIDTH, HEIGH+20);
         [mainScrolView addSubview:av];
     }
 }
@@ -128,7 +128,7 @@
 - (void)snapshotScreenWithView:(UIButton *)sender{
     int a = (int)sender.tag-200;
     AchieveView *av = [self setAchiView:a];
-    av.frame = CGRectMake(0, 0, WIDTH, HEIGH);
+    av.frame = CGRectMake(0, 0, WIDTH, HEIGH+20);
     av.backBtn.hidden = YES;
     av.clickBtn.hidden = YES;
     av.erweima.hidden = NO;

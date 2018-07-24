@@ -30,8 +30,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LV.1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-yt-iyI">
-                        <rect key="frame" x="196" y="22" width="25" height="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ri0-yt-iyI">
+                        <rect key="frame" x="196" y="30" width="0.0" height="0.0"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -95,7 +95,7 @@
                 <outlet property="paihang" destination="Ad5-ny-N77" id="D7S-fq-dc4"/>
                 <outlet property="userName" destination="pQ2-8V-miM" id="ydN-q2-QXi"/>
             </connections>
-            <point key="canvasLocation" x="-218" y="-64"/>
+            <point key="canvasLocation" x="-603" y="-61"/>
         </tableViewCell>
     </objects>
     <resources>

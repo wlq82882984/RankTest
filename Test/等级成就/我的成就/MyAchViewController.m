@@ -12,6 +12,8 @@
 #import "QuanyiView.h"
 #import "Request.h"
 #import "AchShowViewController.h"
+#import "LevelChartsViewController.h"
+#import "AchivChartlistViewController.h"
 
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 // https://api.meditool.cn/Apigrade/myachieve?userid=2421&usertoken=4d6299dc0bec74c9e9bbb21627061563&seluserid=2421
@@ -361,8 +363,12 @@
     }];
 }
 
-// 跳往排行榜
+// 跳往成就排行榜
 - (void)gotoList{
-   
+    AchivChartlistViewController *test = [[AchivChartlistViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:test];
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
 }
 @end

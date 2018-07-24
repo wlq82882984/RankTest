@@ -257,11 +257,14 @@
     _calibra.majorScaleNum = 16;
     _calibra.majorScaleLength = 1;
     _calibra.smallScaleLength = 1;
-    _calibra.smallScaleColor = [UIColor colorWithWhite:1 alpha:.6];
-    _calibra.bgColor = [UIColor blackColor];
+    _calibra.bgColor = [UIColor blueColor];
     _calibra.customArray =  @[@"0",@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8",@"9",@"10",@"11",@"12",@"13",@"14",@"15",@"16"];
     _calibra.edgeSpace = 0;
     _calibra.majorTextColor = [UIColor blackColor];
+    
+    _calibra.majorScaleColor = [UIColor blueColor];
+//    _calibra.smallScaleColor = [UIColor redColor];
+    
     _calibra.center = circle.center;
     [_calibra drawCalibration];
     [headView addSubview:_calibra];
@@ -458,7 +461,13 @@
     [cell.detailLab setText:[model objectForKey:@"TaskMsg"]];
     cell.detailLab.frame = CGRectMake(64, 37, WIDTH - 140, 37);
     [cell.numLab setText:[NSString stringWithFormat:@"+%@",[model objectForKey:@"ExpNum"]]];
-    [cell.clickBtn setTitle:[model objectForKey:@"TaskText"] forState:UIControlStateNormal];
+    if ([[model objectForKey:@"TaskText"] isEqualToString:@""]) {
+        cell.clickBtn.hidden = YES;
+    }else{
+        cell.clickBtn.hidden = NO;
+        [cell.clickBtn setTitle:[model objectForKey:@"TaskText"] forState:UIControlStateNormal];
+    }
+    
     return cell;
 }
 
