@@ -17,6 +17,7 @@
 #import "WinlistsViewController.h"
 #import "AcadPagperViewController.h"
 #import "UpLevelView.h"
+#import "TesssssViewController.h"
 #define WIDTH [[UIScreen mainScreen]bounds].size.width
 #define heig [[UIScreen mainScreen]bounds].size.height
 @interface ViewController ()
@@ -99,8 +100,14 @@
 }
 
 - (IBAction)dosomething:(id)sender {
-    [self getdata];
-   
+//    [self getdata];
+    TesssssViewController *vc = [[TesssssViewController alloc]init];
+    UINavigationController *nvnv = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+    [self presentViewController:nvnv animated:NO completion:^{
+        
+    }];
+    
 }
 
 //https://api.meditool.cn/Apigrade/mygrade?userid={int}&usertoken={string}    我的等级

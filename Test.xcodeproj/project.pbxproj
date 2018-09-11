@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		058CFB01213D0F7200CA0F64 /* TesssssViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 058CFB00213D0F7200CA0F64 /* TesssssViewController.m */; };
 		371311D620DCD579004FEDB8 /* MyAchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 371311D520DCD579004FEDB8 /* MyAchViewController.m */; };
 		37496A5120D2108800FF0E13 /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37496A5020D2108800FF0E13 /* View.xib */; };
 		37496A5420D210AB00FF0E13 /* MyaappCV.m in Sources */ = {isa = PBXBuildFile; fileRef = 37496A5320D210AB00FF0E13 /* MyaappCV.m */; };
@@ -101,6 +102,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		058CFAFF213D0F7200CA0F64 /* TesssssViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TesssssViewController.h; sourceTree = "<group>"; };
+		058CFB00213D0F7200CA0F64 /* TesssssViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TesssssViewController.m; sourceTree = "<group>"; };
 		371311D420DCD579004FEDB8 /* MyAchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyAchViewController.h; sourceTree = "<group>"; };
 		371311D520DCD579004FEDB8 /* MyAchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyAchViewController.m; sourceTree = "<group>"; };
 		37496A5020D2108800FF0E13 /* View.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 		374991B820D0FCBB00AB2052 /* Test */ = {
 			isa = PBXGroup;
 			children = (
+				058CFAFF213D0F7200CA0F64 /* TesssssViewController.h */,
+				058CFB00213D0F7200CA0F64 /* TesssssViewController.m */,
 				37D9201520D9E2DA005F6978 /* Assets.xcassets */,
 				375C544320D3A7FE00863085 /* MLMProgress */,
 				37496A5620D24E8F00FF0E13 /* 等级成就 */,
@@ -772,6 +777,7 @@
 				375A90EF20DB4C2E00BB0597 /* EXPlView.m in Sources */,
 				374FD99420E32848008E6E52 /* SearchSchoolTabViewController.m in Sources */,
 				374FD99820E328EB008E6E52 /* NDSearchTool.m in Sources */,
+				058CFB01213D0F7200CA0F64 /* TesssssViewController.m in Sources */,
 				375B8FB320D895B500E0679C /* UIWebView+AFNetworking.m in Sources */,
 				375C542F20D368C000863085 /* RightsView.m in Sources */,
 				375C546020D3A7FE00863085 /* MLMProgressView.m in Sources */,
